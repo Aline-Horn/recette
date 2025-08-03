@@ -12,31 +12,35 @@
     
 <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php">Recettes</a>
+        <a class="navbar-brand" href="index.php?action=home">Recettes</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                 aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav me-auto">
                 <a class="nav-link" href="index.php">Home</a>
+
                 <?php if (!isset($_SESSION['user'])): ?>
-                    <a class="nav-link" href="?action=register">Register</a>
-                    <a class="nav-link" href="?action=login">Login</a>
+               <a class="nav-link" href="?action=register">Register</a>
+                <a class="nav-link" href="?action=login">Login</a>
+
                 <?php else: ?>
-                    <a class="nav-link" href="?action=add">Add Recette</a>
+                 <a class="nav-link" href="index.php?action=addRecette">Add Recette</a>
                 <?php endif; ?>
             </div>
             <div class="d-flex align-items-center text-white">
                 <?php if (isset($_SESSION['user'])): ?>
                     <span class="me-3">Bonjour, <?= htmlspecialchars($_SESSION['user']['firstname']) ?></span>
-                    <a class="btn btn-sm btn-outline-light" href="?action=logout">Logout</a>
+                    <a class="btn btn-sm btn-outline-light" href="index.php?action=logout">Logout</a>
                 <?php endif; ?>
             </div>
         </div>
     </div>
 </nav>
+
  
       <?php 
       if (isset ($_SESSION ["user"])){

@@ -60,6 +60,7 @@ class RecetteController {
             "texte"=> $_POST ['texte'],
             "note"=> $_POST ['note'],
             ]);
+
         }
 
             

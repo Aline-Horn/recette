@@ -4,7 +4,7 @@ session_start();
 require_once "./view/header.php"; 
 require_once "./controller/UserController.php";
 require_once "./controller/RecetteController.php";
-require_once "./config.php/Database.php";
+require_once "./config/Database.php";
 
 use App\Controller\UserController;
 use App\Config\Database;

@@ -3,7 +3,8 @@
         <?php foreach ($list as $recette) { ?>
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
-                    <img src="uploads/recette<?=$recette['photo'] ?>" class="card-img-top" alt="<?= $recette['nom']?>">
+                <img src="../uploads/recette/<?= $recette['photo'] ?>" class="card-img-top" alt="<?= $recette['nom'] ?>" width="300">
+
                     <div class="card-body">
                         <h5 class="card-title"><?= htmlspecialchars($recette['nom']) ?></h5>
                         <p class="card-text"><?= htmlspecialchars($recette['ingredients']) ?>

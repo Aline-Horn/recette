@@ -22,9 +22,9 @@
     </div>
 
     
-    <div class="commentaire">
+    <div class="comment">
         <form action="" method="post">
-        <input type="text" name="recette" placeholder="recette" value="<?php $detail["nom"] ?> "/> <br>
+        <input type="hidden" name="recette" placeholder="recette" value="<?= $detail['id'] ?>" /> <br>
 
         <textarea name="texte" id="" cols="30" rows="10"></textarea> <br>
         <select name="note" id="note">
@@ -37,7 +37,7 @@
 
         </select>
 
-    <button type="submit" name="addComment>" class="btn btn-outline-warning">Je commente</button>
+       <button type="submit" name="addComment" class="btn btn-outline-warning">Je commente</button>
     </form>
 
     </div>
