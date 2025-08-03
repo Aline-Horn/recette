@@ -47,7 +47,7 @@ return $stmt->fetch(PDO::FETCH_ASSOC);
     /*LOGIN  */
 
 public function login (string $email, string $pwd): array | false {
-    $user = $this->findByEmail ($email); //a funçao ja existe la em cima, por isso chamar ela aqui. 
+    $user = $this->findByEmail ($email); 
     if (password_verify($pwd, $user["pwd"])) {
  return $user;
     }

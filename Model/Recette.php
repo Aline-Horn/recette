@@ -11,7 +11,7 @@ class Recette {
         $this->conn = $db;
     }
     //Créer recette
-    public function add(string $photo, string $nom, string $ingredients, int $auteur): bool //quando uso bool, vrae ou faux, tem return *rever
+    public function add(string $photo, string $nom, string $ingredients, int $auteur): bool 
     {
         $sql = "INSERT INTO recettes (nom, ingredients, auteur, photo) 
                 VALUES (:nom, :ingredients, :auteur, :photo)";
